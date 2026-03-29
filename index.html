@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Wind Developers | Innovation in the Breeze | WindexOS & WCloud</title>
+    <meta name="description" content="Wind Developers presents WindexOS, a revolutionary OS that runs on 512 MB RAM, alongside WCloud, Pilot AI, and the WindSuite office products.">
+    <meta name="keywords" content="Wind Developers, WindexOS, WCloud, StormDrive, Pilot AI, WindWriter, WindSuite, Glassmorphism OS, Lightweight Linux, Software Founder Turkey">
+    <meta name="author" content="Wind Developers">
+    
+    <link rel="icon" href="https://via.placeholder.com/32x32.png?text=W" type="image/png">
+
+    <style>
+        /* === Global Styles (Microsoft Style - Clean & Professional) === */
+        :root {
+            --primary-color: #0078D4; /* Microsoft Blue */
+            --bg-color: #F3F2F1; /* Light Gray */
+            --text-color: #323130; /* Dark Gray */
+            --card-bg: rgba(255, 255, 255, 0.7); /* Glass Effect */
+            --glass-border: rgba(255, 255, 255, 0.3);
+            --wind-gradient: linear-gradient(135deg, #0078D4, #a0ced9); /* Breezy Blue */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Clean Font */
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* === Header & Navigation === */
+        header {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(10px); /* Glassmorphism Navigation */
+            border-bottom: 1px solid var(--glass-border);
+            padding: 1rem 5%;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-icon {
+            width: 24px;
+            height: 24px;
+            background: var(--wind-gradient);
+            border-radius: 50%;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        /* === Hero Section (The Pitch) === */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: var(--wind-gradient);
+            color: white;
+            padding: 0 10%;
+            margin-top: 60px; /* Space for fixed header */
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: white;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 4px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        /* === Products Section (The Portfolio) === */
+        .products {
+            padding: 5rem 10%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(8px); /* Glassmorphism Product Card */
+            border: 1px solid var(--glass-border);
+            border-radius: 8px;
+            padding: 2rem;
+            text-align: center;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .product-card:hover {
+            box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+        }
+
+        .product-icon {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .product-card h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-card p {
+            font-size: 0.95rem;
+            color: #555;
+            margin-bottom: 1.5rem;
+        }
+
+        .product-tag {
+            display: inline-block;
+            background-color: rgba(0, 120, 212, 0.1);
+            color: var(--primary-color);
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        /* === Contact Section (The Network) === */
+        .contact {
+            background-color: white;
+            padding: 4rem 10%;
+            text-align: center;
+            border-top: 1px solid var(--glass-border);
+        }
+
+        .contact h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact p {
+            margin-bottom: 2rem;
+            color: #555;
+        }
+
+        /* === Footer === */
+        footer {
+            background-color: #323130;
+            color: white;
+            text-align: center;
+            padding: 2rem 10%;
+            font-size: 0.85rem;
+        }
+
+        footer a {
+            color: #a0ced9;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo">
+            <div class="logo-icon"></div>
+            Wind Developers
+        </a>
+        <nav>
+            <ul>
+                <li><a href="#windexos">WindexOS</a></li>
+                <li><a href="#wcloud">WCloud</a></li>
+                <li><a href="#suite">WindSuite</a></li>
+                <li><a href="#pilot">Pilot AI</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Breezy Innovation for Everyone</h1>
+        <p>From the Glassmorphism beauty of WindexOS to the secure expanse of WCloud, Wind Developers is shaping the future of efficient software.</p>
+        <a href="#windexos" class="btn">Explore Our Ecosystem</a>
+    </section>
+
+    <section class="products">
+        
+        <div class="product-card" id="windexos">
+            <div class="product-tag">The Operating System</div>
+            <div class="product-icon">🖥️</div>
+            <h3>WindexOS</h3>
+            <p>A fast, secure, and beautiful operating system designed with Glassmorphism elegance. Engineered to be lightweight, running smoothly on as little as 512 MB of RAM.</p>
+            <a href="https://github.com/windcorp/windexos" class="btn">Learn More</a>
+        </nav>
+
+        <div class="product-card" id="wcloud">
+            <div class="product-tag">The Cloud Storage</div>
+            <div class="product-icon">☁️</div>
+            <h3>WCloud</h3>
+            <p>Your data, protected and accessible anywhere. Formerly known as StormDrive, WCloud offers secure, high-speed cloud storage integrated within the Wind ecosystem.</p>
+        </div>
+
+        <div class="product-card" id="pilot">
+            <div class="product-tag">The Artificial Intelligence</div>
+            <div class="product-icon">🤖</div>
+            <h3>Pilot AI</h3>
+            <p>Our sophisticated AI companion designed to optimize your workflow. Pilot AI integrates across all Wind products, providing smart assistance and automation.</p>
+        </div>
+
+        <div class="product-card" id="suite">
+            <div class="product-tag">The Office Suite</div>
+            <div class="product-icon">📄</div>
+            <h3>WindSuite</h3>
+            <p>The core of modern productivity. Featuring **WindWriter**, our powerful word processor designed with simplicity and performance in mind.</p>
+        </div>
+
+    </section>
+
+    <section class="contact">
+        <h2>Join the Breezy Future</h2>
+        <p>Wind Developers is a solo project founded with big vision. We are dedicated to creating efficient, beautiful software for the next generation.</p>
+        <a href="mailto:contact@winddevelopers.vercel.app" class="btn">Contact Sales</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2020 Wind Developers. All rights reserved.</p>
+        <p>Founded by Wind | Turkey</p>
+    </footer>
+
+</body>
+</html>
+
