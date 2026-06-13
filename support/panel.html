@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <div id="login-box">
+        <input type="password" id="pass" placeholder="Şifre">
+        <button onclick="login()">Giriş Yap</button>
+    </div>
+    <div id="panel" style="display:none;">
+        <h1>Temsilci Paneli</h1>
+        <div id="ticketList"></div>
+    </div>
+
+    <script>
+        function login() {
+            if(document.getElementById('pass').value === "@@mirac06") {
+                document.getElementById('login-box').style.display = 'none';
+                document.getElementById('panel').style.display = 'block';
+                loadTickets();
+            }
+        }
+        async function loadTickets() {
+            const res = await fetch('https://api.npoint.io/219d165d4c69ebcdb2b6');
+            const data = await res.json();
+            document.getElementById('ticketList').innerHTML = data.tickets.map(t => 
+                `<div style="border:1px solid #ddd; padding:10px; margin:5px;">
+                    <b>Email:</b> ${t.email} <br> <b>Sorun:</b> ${t.message} <br> <small>${t.date}</small>
+                 </div>`
+            ).join('');
+        }
+    </script>
+</body>
+</html>
