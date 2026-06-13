@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head><link rel="stylesheet" href="style.css"></head>
+<body>
+    <div id="bot-btn" onclick="toggleChat()">💬</div>
+    <div id="chat-window">
+        <div id="messages" style="height:350px; overflow-y:auto;"></div>
+        <textarea id="userInput" placeholder="Sorununu yaz..."></textarea>
+        <button onclick="sendAI()">Sor</button>
+        <button onclick="sendToRep()" style="background:red; color:white;">Temsilciye Gönder</button>
+    </div>
+
+    <script>
+        const GROQ_API_KEY = "BURAYA_KEYINI_YAZ";
+        async function sendAI() {
+            const prompt = document.getElementById("userInput").value;
+            const res = await fetch("https://api.groq.com/openai/v1/chat/completions", {
+                method: "POST",
+                headers: { "Authorization": `Bearer ${GROQ_API_KEY}`, "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    model: "llama3-70b-8192",
+                    messages: [
+                        { role: "system", content: "Sen Wind Developers destek asistanısın. Türkçe, İngilizce, Almanca, Fransızca, İspanyolca, Rusça, Arapça, Japonca, Çince, İtalyanca, Portekizce, Hollandaca, Korece, Hintçe, Yunanca, İsveççe, Lehçe, Fince, Norveççe ve Danca dillerinde hizmet ver. Sadece teknik destekle ilgili cevap ver, alakasız soruları reddet." },
+                        { role: "user", content: prompt }
+                    ]
+                })
+            });
+            const data = await res.json();
+            document.getElementById("messages").innerHTML += `<p>AI: ${data.choices[0].message.content}</p>`;
+        }
+
+        async function sendToRep() {
+            const msg = document.getElementById("userInput").value;
+            const email = prompt("İletişim mailinizi girin:");
+            if(!msg || !email) return;
+
+            const res = await fetch('https://api.npoint.io/219d165d4c69ebcdb2b6');
+            const data = await res.json();
+            data.tickets.push({ email, message: msg, date: new Date().toLocaleString() });
+            
+            await fetch('https://api.npoint.io/219d165d4c69ebcdb2b6', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify(data)
+            });
+            alert("Talebiniz temsilciye ulaştı!");
+        }
+        function toggleChat() { document.getElementById("chat-window").style.display = 'block'; }
+    </script>
+</body>
+</html>
