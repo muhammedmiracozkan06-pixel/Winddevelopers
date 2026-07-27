@@ -1,1199 +1,622 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-
-    <!-- PRIMARY SEO -->
-
-    <title>Wind Developers Corporation | Software & Cloud Solutions</title>
-
-    <meta name="description" content="Wind Developers Corporation builds next-generation software: WindexOS Linux distro, WCloud storage, Webrix Browser, Matylo AI assistant, and the WindStore ecosystem.">
-
-    <meta name="keywords" content="Wind Developers, WindexOS, WCloud, Webrix Browser, Matylo, WindStore, software company, open source, cloud infrastructure, Linux distribution">
-
-    <meta name="author" content="Wind Developers Corporation">
-
-    <meta name="robots" content="index, follow">
-
-
-
-    <!-- CANONICAL -->
-
-    <link rel="canonical" href="https://winddevelopers.duckdns.org/">
-
-
-
-    <!-- HREFLANG for EN/TR -->
-
-    <link rel="alternate" hreflang="en" href="https://winddevelopers.duckdns.org/">
-
-    <link rel="alternate" hreflang="tr" href="https://winddevelopers.duckdns.org/?lang=tr">
-
-    <link rel="alternate" hreflang="x-default" href="https://winddevelopers.duckdns.org/">
-
-
-
-    <!-- GOOGLE SEARCH CONSOLE VERIFICATION -->
-
-    <meta name="google-site-verification" content="AOjkO5IK5S6VUMw4ElCkUhm76u-BxYcvzF2sUktvgsA">
-
-
-
-    <!-- FAVICON -->
-
-    <link rel="icon" type="image/png" href="logo.png">
-
-    <link rel="apple-touch-icon" href="logo.png">
-
-
-
-    <!-- OPEN GRAPH -->
-
-    <meta property="og:type" content="website">
-
-    <meta property="og:title" content="Wind Developers Corporation | Simply Powerful">
-
-    <meta property="og:description" content="Next-generation open-source projects, cloud infrastructures, and software ecosystems: WindexOS, WCloud, Webrix, Matylo, WindStore.">
-
-    <meta property="og:image" content="https://winddevelopers.duckdns.org/logo.png">
-
-    <meta property="og:url" content="https://winddevelopers.duckdns.org/">
-
-    <meta property="og:site_name" content="Wind Developers Corporation">
-
-    <meta property="og:locale" content="en_US">
-
-    <meta property="og:locale:alternate" content="tr_TR">
-
-
-
-    <!-- TWITTER CARD -->
-
-    <meta name="twitter:card" content="summary_large_image">
-
-    <meta name="twitter:title" content="Wind Developers Corporation | Simply Powerful">
-
-    <meta name="twitter:description" content="WindexOS, WCloud, Webrix Browser, Matylo AI — the full Wind Developers ecosystem.">
-
-    <meta name="twitter:image" content="https://winddevelopers.duckdns.org/logo.png">
-
-
-
-    <!-- STRUCTURED DATA (JSON-LD) — helps Google understand the company -->
-
-    <script type="application/ld+json">
-
-    {
-
-      "@context": "https://schema.org",
-
-      "@type": "Organization",
-
-      "name": "Wind Developers Corporation",
-
-      "url": "https://winddevelopers.duckdns.org/",
-
-      "logo": "https://winddevelopers.duckdns.org/logo.png",
-
-      "description": "Wind Developers Corporation builds next-generation open-source software, cloud infrastructure, and AI-powered ecosystems including WindexOS, WCloud, Webrix Browser, Matylo, and WindStore.",
-
-      "foundingDate": "2024",
-
-      "sameAs": [
-
-        "https://developerswind.vercel.app/",
-
-        "https://windwindex.vercel.app/",
-
-        "https://windcloud.onhercules.app"
-
-      ],
-
-      "makesOffer": [
-
-        { "@type": "Offer", "name": "WindexOS", "url": "https://windwindex.vercel.app/" },
-
-        { "@type": "Offer", "name": "WCloud", "url": "https://windcloud.onhercules.app" },
-
-        { "@type": "Offer", "name": "Webrix Browser", "url": "https://sites.google.com/view/webrixbrowser/home" },
-
-        { "@type": "Offer", "name": "Matylo", "url": "https://sites.google.com/view/matylo/ana-sayfa" },
-
-        { "@type": "Offer", "name": "WindStore", "url": "https://windstore.base44.app/" },
-
-        { "@type": "Offer", "name": "Developers Studio", "url": "https://developerswind.vercel.app/" }
-
-      ]
-
-    }
-
-    </script>
-
-
-
-    <style>
-
-        :root {
-
-            --primary-color: #0067b8;
-
-            --dark-bg: #111111;
-
-            --light-bg: #f2f2f2;
-
-            --text-color: #242424;
-
-            --text-light: #505050;
-
-            --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-
-            --transition: all 0.3s ease;
-
-        }
-
-
-
-        * {
-
-            margin: 0;
-
-            padding: 0;
-
-            box-sizing: border-box;
-
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
-        }
-
-
-
-        body {
-
-            color: var(--text-color);
-
-            background-color: #fff;
-
-            line-height: 1.6;
-
-        }
-
-
-
-        header {
-
-            position: sticky;
-
-            top: 0;
-
-            background: rgba(255, 255, 255, 0.95);
-
-            backdrop-filter: blur(10px);
-
-            box-shadow: 0 1px 0 rgba(0,0,0,0.1);
-
-            z-index: 1000;
-
-        }
-
-
-
-        .nav-container {
-
-            max-width: 1600px;
-
-            margin: 0 auto;
-
-            display: flex;
-
-            justify-content: space-between;
-
-            align-items: center;
-
-            padding: 15px 5%;
-
-        }
-
-
-
-        .logo-area {
-
-            display: flex;
-
-            align-items: center;
-
-            gap: 12px;
-
-            text-decoration: none;
-
-            color: var(--text-color);
-
-            font-weight: 700;
-
-            font-size: 1.3rem;
-
-        }
-
-
-
-        .logo-area img {
-
-            height: 32px;
-
-            width: auto;
-
-        }
-
-
-
-        .nav-right {
-
-            display: flex;
-
-            align-items: center;
-
-            gap: 30px;
-
-        }
-
-
-
-        nav ul {
-
-            display: flex;
-
-            list-style: none;
-
-            gap: 24px;
-
-        }
-
-
-
-        nav ul a {
-
-            text-decoration: none;
-
-            color: var(--text-color);
-
-            font-size: 0.95rem;
-
-            font-weight: 500;
-
-            transition: var(--transition);
-
-        }
-
-
-
-        nav ul a:hover {
-
-            color: var(--primary-color);
-
-        }
-
-
-
-        .lang-switcher {
-
-            background: #fff;
-
-            border: 1px solid #8a8a8a;
-
-            padding: 5px 10px;
-
-            font-size: 0.85rem;
-
-            font-weight: 600;
-
-            cursor: pointer;
-
-            transition: var(--transition);
-
-            border-radius: 2px;
-
-        }
-
-
-
-        .lang-switcher:hover {
-
-            background: var(--light-bg);
-
-            border-color: var(--text-color);
-
-        }
-
-
-
-        .hero {
-
-            background: linear-gradient(135deg, #f3f2f1 0%, #e1dfdd 100%);
-
-            padding: 100px 5%;
-
-            display: flex;
-
-            align-items: center;
-
-            min-height: 520px;
-
-        }
-
-
-
-        .hero-content {
-
-            max-width: 650px;
-
-        }
-
-
-
-        .hero h1 {
-
-            font-size: 3rem;
-
-            font-weight: 600;
-
-            line-height: 1.2;
-
-            margin-bottom: 15px;
-
-            color: #000;
-
-        }
-
-
-
-        .hero p {
-
-            font-size: 1.2rem;
-
-            color: var(--text-light);
-
-            margin-bottom: 30px;
-
-        }
-
-
-
-        .cta-btn {
-
-            display: inline-block;
-
-            background-color: var(--primary-color);
-
-            color: #fff;
-
-            padding: 12px 28px;
-
-            font-weight: 600;
-
-            text-decoration: none;
-
-            transition: var(--transition);
-
-            border-radius: 2px;
-
-        }
-
-
-
-        .cta-btn:hover {
-
-            background-color: #005293;
-
-            box-shadow: var(--card-shadow);
-
-        }
-
-
-
-        .products-section {
-
-            max-width: 1600px;
-
-            margin: 0 auto;
-
-            padding: 80px 5%;
-
-        }
-
-
-
-        .section-title {
-
-            font-size: 2rem;
-
-            font-weight: 600;
-
-            margin-bottom: 40px;
-
-        }
-
-
-
-        .products-grid {
-
-            display: grid;
-
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-
-            gap: 30px;
-
-        }
-
-
-
-        .product-card {
-
-            background: #fff;
-
-            border: 1px solid #e0e0e0;
-
-            padding: 30px;
-
-            display: flex;
-
-            flex-direction: column;
-
-            justify-content: space-between;
-
-            transition: var(--transition);
-
-            border-radius: 4px;
-
-        }
-
-
-
-        .product-card:hover {
-
-            transform: translateY(-4px);
-
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-
-            border-color: transparent;
-
-        }
-
-
-
-        .product-card h3 {
-
-            font-size: 1.4rem;
-
-            margin-bottom: 12px;
-
-            color: #000;
-
-        }
-
-
-
-        .product-card p {
-
-            color: var(--text-light);
-
-            font-size: 0.95rem;
-
-            margin-bottom: 25px;
-
-            flex-grow: 1;
-
-        }
-
-
-
-        .product-link {
-
-            color: var(--primary-color);
-
-            text-decoration: none;
-
-            font-weight: 600;
-
-            font-size: 0.95rem;
-
-            display: inline-flex;
-
-            align-items: center;
-
-            gap: 5px;
-
-        }
-
-
-
-        .product-link:hover {
-
-            text-decoration: underline;
-
-        }
-
-
-
-        .about-section {
-
-            background-color: #fafafa;
-
-            padding: 80px 5%;
-
-            text-align: center;
-
-        }
-
-
-
-        .about-container {
-
-            max-width: 850px;
-
-            margin: 0 auto;
-
-        }
-
-
-
-        .about-container p {
-
-            font-size: 1.15rem;
-
-            color: var(--text-light);
-
-            margin-top: 20px;
-
-        }
-
-
-
-        footer {
-
-            background-color: var(--light-bg);
-
-            padding: 50px 5% 30px;
-
-            border-top: 1px solid #e0e0e0;
-
-            font-size: 0.85rem;
-
-            color: var(--text-light);
-
-        }
-
-
-
-        .footer-container {
-
-            max-width: 1600px;
-
-            margin: 0 auto;
-
-            display: flex;
-
-            justify-content: space-between;
-
-            flex-wrap: wrap;
-
-            gap: 30px;
-
-            margin-bottom: 40px;
-
-        }
-
-
-
-        .footer-col h4 {
-
-            color: #000;
-
-            margin-bottom: 15px;
-
-            font-size: 0.95rem;
-
-        }
-
-
-
-        .footer-col ul {
-
-            list-style: none;
-
-        }
-
-
-
-        .footer-col ul li {
-
-            margin-bottom: 10px;
-
-        }
-
-
-
-        .footer-col ul li a {
-
-            text-decoration: none;
-
-            color: var(--text-light);
-
-            transition: var(--transition);
-
-        }
-
-
-
-        .footer-col ul li a:hover {
-
-            color: var(--primary-color);
-
-            text-decoration: underline;
-
-        }
-
-
-
-        .footer-bottom {
-
-            max-width: 1600px;
-
-            margin: 0 auto;
-
-            display: flex;
-
-            justify-content: space-between;
-
-            align-items: center;
-
-            border-top: 1px solid #dcdcdc;
-
-            padding-top: 20px;
-
-        }
-
-
-
-        @media (max-width: 768px) {
-
-            .nav-container {
-
-                flex-direction: column;
-
-                gap: 15px;
-
-            }
-
-            .nav-right {
-
-                flex-direction: column;
-
-                gap: 15px;
-
-            }
-
-            nav ul {
-
-                flex-wrap: wrap;
-
-                justify-content: center;
-
-                gap: 15px;
-
-            }
-
-            .hero h1 {
-
-                font-size: 2.2rem;
-
-            }
-
-            .footer-bottom {
-
-                flex-direction: column;
-
-                gap: 15px;
-
-                text-align: center;
-
-            }
-
-        }
-
-    </style>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- PRIMARY SEO -->
+<title>Wind Developers Corporation | Software & Cloud Solutions</title>
+<meta name="description" content="Wind Developers Corporation builds next-generation software: WindexOS Linux distro, Webrix Browser, Matylo AI assistant, WMail, WindStore and Wind Education.">
+<meta name="keywords" content="Wind Developers, WindexOS, Webrix Browser, Matylo, WMail, WindStore, Wind Education, software company, open source">
+<meta name="author" content="Wind Developers Corporation">
+<meta name="robots" content="index, follow">
+
+<!-- CANONICAL -->
+<link rel="canonical" href="https://winddevelopers.duckdns.org/">
+
+<!-- HREFLANG for EN/TR -->
+<link rel="alternate" hreflang="en" href="https://winddevelopers.duckdns.org/">
+<link rel="alternate" hreflang="tr" href="https://winddevelopers.duckdns.org/?lang=tr">
+<link rel="alternate" hreflang="x-default" href="https://winddevelopers.duckdns.org/">
+
+<!-- GOOGLE SEARCH CONSOLE VERIFICATION -->
+<meta name="google-site-verification" content="AOjkO5IK5S6VUMw4ElCkUhm76u-BxYcvzF2sUktvgsA">
+
+<!-- FAVICON -->
+<link rel="icon" type="image/png" href="logo.png">
+<link rel="apple-touch-icon" href="logo.png">
+
+<!-- OPEN GRAPH -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Wind Developers Corporation | Simply Powerful">
+<meta property="og:description" content="Next-generation open-source projects and software ecosystems: WindexOS, Webrix, Matylo, WMail, WindStore, Wind Education.">
+<meta property="og:image" content="https://winddevelopers.duckdns.org/logo.png">
+<meta property="og:url" content="https://winddevelopers.duckdns.org/">
+<meta property="og:site_name" content="Wind Developers Corporation">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="tr_TR">
+
+<!-- TWITTER CARD -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Wind Developers Corporation | Simply Powerful">
+<meta name="twitter:description" content="WindexOS, Webrix Browser, Matylo AI, WMail, WindStore and Wind Education — the full Wind Developers ecosystem.">
+<meta name="twitter:image" content="https://winddevelopers.duckdns.org/logo.png">
+
+<!-- STRUCTURED DATA (JSON-LD) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Wind Developers Corporation",
+  "url": "https://winddevelopers.duckdns.org/",
+  "logo": "https://winddevelopers.duckdns.org/logo.png",
+  "description": "Wind Developers Corporation builds next-generation open-source software and AI-powered ecosystems including WindexOS, Webrix Browser, Matylo, WMail, WindStore and Wind Education.",
+  "foundingDate": "2024",
+  "sameAs": [
+    "https://developerswind.vercel.app/",
+    "https://windexos.vercel.app/"
+  ],
+  "makesOffer": [
+    { "@type": "Offer", "name": "WindexOS", "url": "https://windexos.vercel.app/" },
+    { "@type": "Offer", "name": "Webrix Browser", "url": "https://webrixexp.vercel.app/" },
+    { "@type": "Offer", "name": "Matylo", "url": "https://matylo.vercel.app/" },
+    { "@type": "Offer", "name": "WMail", "url": "https://wmswmail.vercel.app/" },
+    { "@type": "Offer", "name": "WindStore", "url": "https://windstore.base44.app/" },
+    { "@type": "Offer", "name": "Wind Education", "url": "https://education.winddevelopers.duckdns.org/" },
+    { "@type": "Offer", "name": "Developers Studio", "url": "https://developerswind.vercel.app/" }
+  ]
+}
+</script>
+
+<style>
+  :root {
+    --ink: #14181f;
+    --ink-soft: #5b6675;
+    --cloud: #f6f8fa;
+    --line: #e4e8ec;
+    --sky: #0ea5e9;
+    --teal: #14b8a6;
+    --gradient: linear-gradient(120deg, var(--sky), var(--teal));
+    --card-shadow: 0 10px 24px rgba(20, 24, 31, 0.06);
+    --transition: all 0.25s ease;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--ink);
+    background: #fff;
+    line-height: 1.6;
+  }
+
+  /* ---------- Header ---------- */
+  header {
+    position: sticky;
+    top: 0;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+    z-index: 1000;
+  }
+
+  .nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 5%;
+  }
+
+  .logo-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--ink);
+    font-weight: 700;
+    font-size: 1.2rem;
+    letter-spacing: -0.01em;
+  }
+
+  .logo-area img { height: 30px; width: auto; }
+
+  .nav-right { display: flex; align-items: center; gap: 28px; }
+
+  nav ul { display: flex; list-style: none; gap: 22px; }
+
+  nav ul a {
+    text-decoration: none;
+    color: var(--ink);
+    font-size: 0.92rem;
+    font-weight: 600;
+    transition: var(--transition);
+  }
+
+  nav ul a:hover { color: var(--sky); }
+
+  .lang-switcher {
+    background: #fff;
+    border: 1px solid var(--line);
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    border-radius: 999px;
+    transition: var(--transition);
+  }
+
+  .lang-switcher:hover { border-color: var(--sky); color: var(--sky); }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    position: relative;
+    overflow: hidden;
+    background: var(--cloud);
+    padding: 110px 5% 90px;
+    min-height: 480px;
+    display: flex;
+    align-items: center;
+  }
+
+  .hero::after {
+    content: "";
+    position: absolute;
+    right: -10%;
+    top: -20%;
+    width: 60%;
+    height: 140%;
+    background:
+      radial-gradient(circle at 30% 30%, rgba(14,165,233,0.16), transparent 55%),
+      radial-gradient(circle at 70% 70%, rgba(20,184,166,0.14), transparent 55%);
+    pointer-events: none;
+  }
+
+  .wind-lines {
+    position: absolute;
+    right: 4%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 42%;
+    max-width: 420px;
+    opacity: 0.9;
+  }
+
+  .hero-content { position: relative; max-width: 620px; z-index: 1; }
+
+  .eyebrow {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 14px;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 16px;
+    letter-spacing: -0.02em;
+  }
+
+  .hero p {
+    font-size: 1.12rem;
+    color: var(--ink-soft);
+    margin-bottom: 32px;
+    max-width: 520px;
+  }
+
+  .cta-btn {
+    display: inline-block;
+    background: var(--gradient);
+    color: #fff;
+    padding: 13px 30px;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 999px;
+    transition: var(--transition);
+    box-shadow: 0 8px 20px rgba(14,165,233,0.28);
+  }
+
+  .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 26px rgba(14,165,233,0.35); }
+
+  /* ---------- Products ---------- */
+  .products-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 90px 5%;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin-bottom: 8px;
+  }
+
+  .section-sub {
+    color: var(--ink-soft);
+    margin-bottom: 44px;
+    max-width: 560px;
+  }
+
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 26px;
+  }
+
+  .product-card {
+    background: #fff;
+    border: 1px solid var(--line);
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 14px;
+    transition: var(--transition);
+  }
+
+  .product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--card-shadow);
+    border-color: transparent;
+  }
+
+  .badge {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: var(--gradient);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.95rem;
+    margin-bottom: 16px;
+  }
+
+  .product-card h3 { font-size: 1.28rem; margin-bottom: 10px; }
+
+  .product-card p {
+    color: var(--ink-soft);
+    font-size: 0.95rem;
+    margin-bottom: 22px;
+    flex-grow: 1;
+  }
+
+  .product-link {
+    color: var(--sky);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.92rem;
+  }
+
+  .product-link:hover { text-decoration: underline; }
+
+  /* ---------- About ---------- */
+  .about-section {
+    background: var(--cloud);
+    padding: 90px 5%;
+    text-align: center;
+  }
+
+  .about-container { max-width: 760px; margin: 0 auto; }
+
+  .about-container h2 { font-size: 2rem; font-weight: 700; letter-spacing: -0.01em; }
+
+  .about-container p {
+    font-size: 1.1rem;
+    color: var(--ink-soft);
+    margin-top: 18px;
+  }
+
+  /* ---------- Footer ---------- */
+  footer {
+    padding: 56px 5% 30px;
+    border-top: 1px solid var(--line);
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+  }
+
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto 40px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .footer-col h4 { color: var(--ink); margin-bottom: 14px; font-size: 0.92rem; }
+
+  .footer-col ul { list-style: none; }
+
+  .footer-col ul li { margin-bottom: 10px; }
+
+  .footer-col ul li a { text-decoration: none; color: var(--ink-soft); transition: var(--transition); }
+
+  .footer-col ul li a:hover { color: var(--sky); text-decoration: underline; }
+
+  .footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--line);
+    padding-top: 20px;
+  }
+
+  @media (max-width: 768px) {
+    .nav-container { flex-direction: column; gap: 15px; }
+    .nav-right { flex-direction: column; gap: 15px; }
+    nav ul { flex-wrap: wrap; justify-content: center; gap: 15px; }
+    .hero h1 { font-size: 2.2rem; }
+    .wind-lines { display: none; }
+    .footer-bottom { flex-direction: column; gap: 15px; text-align: center; }
+  }
+</style>
 </head>
-
 <body>
 
+<header>
+  <div class="nav-container">
+    <a href="#" class="logo-area" aria-label="Wind Developers Home">
+      <img src="logo.png" alt="Wind Developers Corporation Logo">
+      <span>Wind Developers</span>
+    </a>
+    <div class="nav-right">
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="#products" id="nav-products">Products</a></li>
+          <li><a href="#about" id="nav-about">Corporate</a></li>
+          <li><a href="https://developerswind.vercel.app/" target="_blank" rel="noopener" id="nav-studio">Developers Studio</a></li>
+        </ul>
+      </nav>
+      <button class="lang-switcher" onclick="toggleLanguage()" id="lang-btn" aria-label="Switch language">TR</button>
+    </div>
+  </div>
+</header>
 
+<main>
+  <section class="hero" aria-label="Hero">
+    <svg class="wind-lines" viewBox="0 0 300 220" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M10 60 C 90 20, 160 20, 260 60" stroke="#0ea5e9" stroke-width="6" stroke-linecap="round" opacity="0.55"/>
+      <path d="M30 110 C 110 70, 190 70, 280 110" stroke="#14b8a6" stroke-width="6" stroke-linecap="round" opacity="0.6"/>
+      <path d="M10 160 C 90 130, 170 130, 250 160" stroke="#0ea5e9" stroke-width="6" stroke-linecap="round" opacity="0.4"/>
+    </svg>
+    <div class="hero-content">
+      <span class="eyebrow" id="hero-eyebrow">Software &amp; Cloud Ecosystem</span>
+      <h1 id="hero-title">Simply Powerful.</h1>
+      <p id="hero-desc">Wind Developers Corporation develops next-generation open-source projects, robust software, and intuitive digital tools to optimize your daily digital experience.</p>
+      <a href="#products" class="cta-btn" id="hero-cta">Explore Ecosystem</a>
+    </div>
+  </section>
 
-    <header>
+  <section id="products" class="products-section" aria-label="Products">
+    <h2 class="section-title" id="section-products-title">Innovative Technology Solutions</h2>
+    <p class="section-sub" id="section-products-sub">Everything we build, from the operating system up.</p>
+    <div class="products-grid">
 
-        <div class="nav-container">
-
-            <a href="#" class="logo-area" aria-label="Wind Developers Home">
-
-                <img src="logo.png" alt="Wind Developers Corporation Logo">
-
-                <span>Wind Developers</span>
-
-            </a>
-
-            <div class="nav-right">
-
-                <nav aria-label="Main navigation">
-
-                    <ul>
-
-                        <li><a href="#products" id="nav-products">Products</a></li>
-
-                        <li><a href="#about" id="nav-about">Corporate</a></li>
-
-                        <li><a href="https://developerswind.vercel.app/" target="_blank" rel="noopener" id="nav-studio">Developers Studio</a></li>
-
-                    </ul>
-
-                </nav>
-
-                <button class="lang-switcher" onclick="toggleLanguage()" id="lang-btn" aria-label="Switch language">TR</button>
-
-            </div>
-
+      <article class="product-card">
+        <div>
+          <div class="badge">Wx</div>
+          <h3 id="p1-title">WindexOS</h3>
+          <p id="p1-desc">A speed and performance-focused modern Linux distribution equipped with custom system utilities, an optimized kernel structure, and native built-in CLI solutions.</p>
         </div>
-
-    </header>
-
-
-
-    <main>
-
-        <section class="hero" aria-label="Hero">
-
-            <div class="hero-content">
-
-                <h1 id="hero-title">Simply Powerful.</h1>
-
-                <p id="hero-desc">Wind Developers Corporation develops next-generation open-source projects, robust cloud infrastructures, and intuitive software ecosystems to optimize your daily digital experience.</p>
-
-                <a href="#products" class="cta-btn" id="hero-cta">Explore Ecosystem</a>
-
-            </div>
-
-        </section>
-
-
-
-        <section id="products" class="products-section" aria-label="Products">
-
-            <h2 class="section-title" id="section-products-title">Innovative Technology Solutions</h2>
-
-            <div class="products-grid">
-
-
-
-                <article class="product-card">
-
-                    <div>
-
-                        <h3 id="p1-title">WindexOS</h3>
-
-                        <p id="p1-desc">A speed and performance-focused modern Linux distribution equipped with custom system utilities, an optimized kernel structure, and native built-in CLI solutions.</p>
-
-                    </div>
-
-                    <a href="https://windwindex.vercel.app/" class="product-link" target="_blank" rel="noopener" id="p1-link">Explore WindexOS &rarr;</a>
-
-                </article>
-
-
-
-                <article class="product-card">
-
-                    <div>
-
-                        <h3 id="p2-title">WCloud (WindCloud)</h3>
-
-                        <p id="p2-desc">A highly available, secure, scalable, and flexible cloud storage and management platform built for both developers and enterprises.</p>
-
-                    </div>
-
-                    <a href="https://windcloud.onhercules.app" class="product-link" target="_blank" rel="noopener" id="p2-link">Go to WCloud &rarr;</a>
-
-                </article>
-
-
-
-                <article class="product-card">
-
-                    <div>
-
-                        <h3 id="p3-title">Webrix Browser</h3>
-
-                        <p id="p3-desc">A next-generation browser redefining the web experience with custom URL commands, advanced tab hierarchy, and an ultra-lightweight engine architecture.</p>
-
-                    </div>
-
-                    <a href="https://sites.google.com/view/webrixbrowser/home" class="product-link" target="_blank" rel="noopener" id="p3-link">Join Webrix &rarr;</a>
-
-                </article>
-
-
-
-                <article class="product-card">
-
-                    <div>
-
-                        <h3 id="p4-title">Matylo</h3>
-
-                        <p id="p4-desc">An intelligent assistant that smartly manages your digital workspaces and communities using advanced AI integrations and automation features.</p>
-
-                    </div>
-
-                    <a href="https://sites.google.com/view/matylo/ana-sayfa" class="product-link" target="_blank" rel="noopener" id="p4-link">Discover Matylo &rarr;</a>
-
-                </article>
-
-
-
-                <article class="product-card">
-
-                    <div>
-
-                        <h3 id="p5-title">WindStore</h3>
-
-                        <p id="p5-desc">A modern application marketplace where you can securely access the most powerful and optimized apps within the Wind Developers ecosystem.</p>
-
-                    </div>
-
-                    <a href="https://windstore.base44.app/" class="product-link" target="_blank" rel="noopener" id="p5-link">Visit WindStore &rarr;</a>
-
-                </article>
-
-
-
-                <article class="product-card">
-
-                    <div>
-
-                        <h3 id="p6-title">Developers Studio</h3>
-
-                        <p id="p6-desc">An innovative, inclusive, and centralized developer hub designed to accelerate coding workflows and streamline deployment for creators.</p>
-
-                    </div>
-
-                    <a href="https://developerswind.vercel.app/" class="product-link" target="_blank" rel="noopener" id="p6-link">Launch Studio &rarr;</a>
-
-                </article>
-
-
-
-            </div>
-
-        </section>
-
-
-
-        <section id="about" class="about-section" aria-label="About">
-
-            <div class="about-container">
-
-                <h2 id="about-title">About Wind Developers</h2>
-
-                <p id="about-desc">We turn ideas into pure performance. With our full-stack programming models, custom operating system architecture research, and cutting-edge artificial intelligence integrations, we represent a global software vision dedicated to raising technology standards.</p>
-
-            </div>
-
-        </section>
-
-    </main>
-
-
-
-    <footer>
-
-        <div class="footer-container">
-
-            <div class="footer-col">
-
-                <h4 id="f-col1">Ecosystem</h4>
-
-                <ul>
-
-                    <li><a href="https://windwindex.vercel.app/">WindexOS</a></li>
-
-                    <li><a href="https://windcloud.onhercules.app">WCloud</a></li>
-
-                    <li><a href="https://windstore.base44.app/">WindStore</a></li>
-
-                </ul>
-
-            </div>
-
-            <div class="footer-col">
-
-                <h4 id="f-col2">Developer</h4>
-
-                <ul>
-
-                    <li><a href="https://developerswind.vercel.app/">Developers Studio</a></li>
-
-                    <li><a href="https://sites.google.com/view/matylo/ana-sayfa">Matylo AI</a></li>
-
-                    <li><a href="https://sites.google.com/view/webrixbrowser/home">Webrix Project</a></li>
-
-                </ul>
-
-            </div>
-
-            <div class="footer-col">
-
-                <h4 id="f-col3">Corporate</h4>
-
-                <ul>
-
-                    <li><a href="#about" id="f-link-about">About Us</a></li>
-
-                    <li><a href="#about" id="f-link-vision">Our Vision</a></li>
-
-                    <li><a href="mailto:supportwinddevs@gmail.com" id="f-link-contact">Contact</a></li>
-
-                </ul>
-
-            </div>
-
+        <a href="https://windexos.vercel.app/" class="product-link" target="_blank" rel="noopener" id="p1-link">Explore WindexOS &rarr;</a>
+      </article>
+
+      <article class="product-card">
+        <div>
+          <div class="badge">Wb</div>
+          <h3 id="p2-title">Webrix Browser</h3>
+          <p id="p2-desc">A next-generation browser redefining the web experience with custom URL commands, advanced tab hierarchy, and an ultra-lightweight engine architecture.</p>
         </div>
+        <a href="https://webrixexp.vercel.app/" class="product-link" target="_blank" rel="noopener" id="p2-link">Join Webrix &rarr;</a>
+      </article>
 
-
-
-        <div class="footer-bottom">
-
-            <span id="footer-copy">&copy; 2026 Wind Developers Corporation. All rights reserved.</span>
-
-            <span>Simply Powerful.</span>
-
+      <article class="product-card">
+        <div>
+          <div class="badge">Ma</div>
+          <h3 id="p3-title">Matylo</h3>
+          <p id="p3-desc">An intelligent assistant that smartly manages your digital workspaces and communities using advanced AI integrations and automation features.</p>
         </div>
-
-    </footer>
-
-
-
-    <script>
-
-        const translations = {
-
-            en: {
-
-                pageTitle: "Wind Developers Corporation | Software & Cloud Solutions",
-
-                metaDesc: "Wind Developers Corporation builds next-generation software: WindexOS Linux distro, WCloud storage, Webrix Browser, Matylo AI assistant, and the WindStore ecosystem.",
-
-                navProducts: "Products",
-
-                navAbout: "Corporate",
-
-                navStudio: "Developers Studio",
-
-                heroTitle: "Simply Powerful.",
-
-                heroDesc: "Wind Developers Corporation develops next-generation open-source projects, robust cloud infrastructures, and intuitive software ecosystems to optimize your daily digital experience.",
-
-                heroCta: "Explore Ecosystem",
-
-                sectionProductsTitle: "Innovative Technology Solutions",
-
-                p1Title: "WindexOS", p1Desc: "A speed and performance-focused modern Linux distribution equipped with custom system utilities, an optimized kernel structure, and native built-in CLI solutions.", p1Link: "Explore WindexOS →",
-
-                p2Title: "WCloud (WindCloud)", p2Desc: "A highly available, secure, scalable, and flexible cloud storage and management platform built for both developers and enterprises.", p2Link: "Go to WCloud →",
-
-                p3Title: "Webrix Browser", p3Desc: "A next-generation browser redefining the web experience with custom URL commands, advanced tab hierarchy, and an ultra-lightweight engine architecture.", p3Link: "Join Webrix →",
-
-                p4Title: "Matylo", p4Desc: "An intelligent assistant that smartly manages your digital workspaces and communities using advanced AI integrations and automation features.", p4Link: "Discover Matylo →",
-
-                p5Title: "WindStore", p5Desc: "A modern application marketplace where you can securely access the most powerful and optimized apps within the Wind Developers ecosystem.", p5Link: "Visit WindStore →",
-
-                p6Title: "Developers Studio", p6Desc: "An innovative, inclusive, and centralized developer hub designed to accelerate coding workflows and streamline deployment for creators.", p6Link: "Launch Studio →",
-
-                aboutTitle: "About Wind Developers",
-
-                aboutDesc: "We turn ideas into pure performance. With our full-stack programming models, custom operating system architecture research, and cutting-edge artificial intelligence integrations, we represent a global software vision dedicated to raising technology standards.",
-
-                fCol1: "Ecosystem", fCol2: "Developer", fCol3: "Corporate",
-
-                fLinkAbout: "About Us", fLinkVision: "Our Vision", fLinkContact: "Contact",
-
-                footerCopy: "© 2026 Wind Developers Corporation. All rights reserved.",
-
-                btnText: "TR"
-
-            },
-
-            tr: {
-
-                pageTitle: "Wind Developers Corporation | Simply Powerful",
-
-                metaDesc: "Wind Developers Corporation; WindexOS, WCloud, Webrix Browser ve yapay zeka çözümleriyle geleceğin teknolojisini ve yazılım ekosistemini inşa ediyor.",
-
-                navProducts: "Ürünlerimiz",
-
-                navAbout: "Kurumsal",
-
-                navStudio: "Developers Studio",
-
-                heroTitle: "Simply Powerful.",
-
-                heroDesc: "Wind Developers Corporation, yeni nesil açık kaynak projeler, kararlı bulut altyapıları ve günlük dijital deneyiminizi optimize eden yazılım ekosistemleri geliştirir.",
-
-                heroCta: "Ekosistemi Keşfedin",
-
-                sectionProductsTitle: "Yenilikçi Teknoloji Çözümlerimiz",
-
-                p1Title: "WindexOS", p1Desc: "Özelleştirilmiş sistem araçları, optimize edilmiş çekirdek yapısı ve yerleşik özgün CLI çözümleriyle donatılmış, hız ve performans odaklı modern Linux dağıtımı.", p1Link: "WindexOS Projesini İnceleyin →",
-
-                p2Title: "WCloud (WindCloud)", p2Desc: "Geliştiriciler ve kurumlar için yüksek erişilebilirlik sunan, güvenli, ölçeklenebilir ve esnek bulut depolama ve yönetim platformu.", p2Link: "WCloud'a Gidin →",
-
-                p3Title: "Webrix Browser", p3Desc: "Özel URL komutları, gelişmiş sekme hiyerarşisi ve ultra hafif motor mimarisiyle web deneyimini yeniden tanımlayan yeni nesil tarayıcı.", p3Link: "Webrix dünyasına katılın →",
-
-                p4Title: "Matylo", p4Desc: "Yapay zeka entegrasyonları ve gelişmiş otomasyon yetenekleri ile dijital çalışma alanlarınızı ve topluluklarınızı akıllıca yöneten asistan.", p4Link: "Matylo Bot'u Keşfedin →",
-
-                p5Title: "WindStore", p5Desc: "Wind Developers ekosistemindeki en güçlü ve optimize uygulamalara güvenle erişebileceğiniz modern uygulama mağazası altyapısı.", p5Link: "WindStore'u Ziyaret Edin →",
-
-                p6Title: "Developers Studio", p6Desc: "Geliştiriciler için kodlama süreçlerini hızlandıran, entegrasyonu kolaylaştıran yenilikçi ve kapsayıcı merkezi geliştirici platformu.", p6Link: "Stüdyoya Giriş Yapın →",
-
-                aboutTitle: "Wind Developers Hakkında",
-
-                aboutDesc: "Fikirleri performansa dönüştürüyoruz. Tam yığın (full-stack) programlama modellerimiz, işletim sistemi mimarisi çalışmalarımız ve yenilikçi yapay zeka entegrasyonlarımızla, teknoloji standartlarını yükseltmeyi hedefleyen global bir yazılım vizyonuyuz.",
-
-                fCol1: "Ekosistem", fCol2: "Geliştirici", fCol3: "Kurumsal",
-
-                fLinkAbout: "Hakkımızda", fLinkVision: "Vizyonumuz", fLinkContact: "İletişim",
-
-                footerCopy: "© 2026 Wind Developers Corporation. Tüm hakları saklıdır.",
-
-                btnText: "EN"
-
-            }
-
-        };
-
-
-
-        let currentLang = 'en';
-
-
-
-        function applyTranslations(lang) {
-
-            const t = translations[lang];
-
-            document.documentElement.lang = lang;
-
-
-
-            // BUG FIX: title tag document.title ile değiştirilmeli
-
-            document.title = t.pageTitle;
-
-
-
-            // Meta description
-
-            document.querySelector('meta[name="description"]').setAttribute('content', t.metaDesc);
-
-            document.querySelector('meta[property="og:title"]').setAttribute('content', t.pageTitle);
-
-            document.querySelector('meta[property="og:description"]').setAttribute('content', t.metaDesc);
-
-
-
-            document.getElementById('nav-products').innerText = t.navProducts;
-
-            document.getElementById('nav-about').innerText = t.navAbout;
-
-            document.getElementById('nav-studio').innerText = t.navStudio;
-
-
-
-            document.getElementById('hero-title').innerText = t.heroTitle;
-
-            document.getElementById('hero-desc').innerText = t.heroDesc;
-
-            document.getElementById('hero-cta').innerText = t.heroCta;
-
-
-
-            document.getElementById('section-products-title').innerText = t.sectionProductsTitle;
-
-
-
-            ['1','2','3','4','5','6'].forEach(n => {
-
-                document.getElementById(`p${n}-title`).innerText = t[`p${n}Title`];
-
-                document.getElementById(`p${n}-desc`).innerText = t[`p${n}Desc`];
-
-                document.getElementById(`p${n}-link`).innerText = t[`p${n}Link`];
-
-            });
-
-
-
-            document.getElementById('about-title').innerText = t.aboutTitle;
-
-            document.getElementById('about-desc').innerText = t.aboutDesc;
-
-
-
-            document.getElementById('f-col1').innerText = t.fCol1;
-
-            document.getElementById('f-col2').innerText = t.fCol2;
-
-            document.getElementById('f-col3').innerText = t.fCol3;
-
-            document.getElementById('f-link-about').innerText = t.fLinkAbout;
-
-            document.getElementById('f-link-vision').innerText = t.fLinkVision;
-
-            document.getElementById('f-link-contact').innerText = t.fLinkContact;
-
-            document.getElementById('footer-copy').innerText = t.footerCopy;
-
-
-
-            document.getElementById('lang-btn').innerText = t.btnText;
-
-        }
-
-
-
-        function toggleLanguage() {
-
-            currentLang = currentLang === 'en' ? 'tr' : 'en';
-
-            applyTranslations(currentLang);
-
-        }
-
-
-
-        // URL'de ?lang=tr varsa otomatik Türkçe aç
-
-        if (new URLSearchParams(window.location.search).get('lang') === 'tr') {
-
-            currentLang = 'tr';
-
-            applyTranslations('tr');
-
-        }
-
-    </script>
-
+        <a href="https://matylo.vercel.app/" class="product-link" target="_blank" rel="noopener" id="p3-link">Discover Matylo &rarr;</a>
+      </article>
+
+      <article class="product-card">
+        <div>
+          <div class="badge">Wm</div>
+          <h3 id="p4-title">WMail</h3>
+          <p id="p4-desc">A clean, fast, and secure mail client built for the Wind Developers ecosystem, designed to keep your communication simple and private.</p>
+        </div>
+        <a href="https://wmswmail.vercel.app/" class="product-link" target="_blank" rel="noopener" id="p4-link">Open WMail &rarr;</a>
+      </article>
+
+      <article class="product-card">
+        <div>
+          <div class="badge">Ws</div>
+          <h3 id="p5-title">WindStore</h3>
+          <p id="p5-desc">A modern application marketplace where you can securely access the most powerful and optimized apps within the Wind Developers ecosystem.</p>
+        </div>
+        <a href="https://windstore.base44.app/" class="product-link" target="_blank" rel="noopener" id="p5-link">Visit WindStore &rarr;</a>
+      </article>
+
+      <article class="product-card">
+        <div>
+          <div class="badge">Ed</div>
+          <h3 id="p6-title">Wind Education</h3>
+          <p id="p6-desc">Free learning resources, guides, and courses that help developers and everyday users get the most out of the Wind Developers ecosystem.</p>
+        </div>
+        <a href="https://education.winddevelopers.duckdns.org/" class="product-link" target="_blank" rel="noopener" id="p6-link">Start Learning &rarr;</a>
+      </article>
+
+      <article class="product-card">
+        <div>
+          <div class="badge">Ds</div>
+          <h3 id="p7-title">Developers Studio</h3>
+          <p id="p7-desc">An innovative, inclusive, and centralized developer hub designed to accelerate coding workflows and streamline deployment for creators.</p>
+        </div>
+        <a href="https://developerswind.vercel.app/" class="product-link" target="_blank" rel="noopener" id="p7-link">Launch Studio &rarr;</a>
+      </article>
+
+    </div>
+  </section>
+
+  <section id="about" class="about-section" aria-label="About">
+    <div class="about-container">
+      <h2 id="about-title">About Wind Developers</h2>
+      <p id="about-desc">We turn ideas into pure performance. With our full-stack programming models, custom operating system architecture research, and cutting-edge artificial intelligence integrations, we represent a global software vision dedicated to raising technology standards.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-container">
+    <div class="footer-col">
+      <h4 id="f-col1">Ecosystem</h4>
+      <ul>
+        <li><a href="https://windexos.vercel.app/">WindexOS</a></li>
+        <li><a href="https://webrixexp.vercel.app/">Webrix Browser</a></li>
+        <li><a href="https://windstore.base44.app/">WindStore</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4 id="f-col2">Developer</h4>
+      <ul>
+        <li><a href="https://developerswind.vercel.app/">Developers Studio</a></li>
+        <li><a href="https://matylo.vercel.app/">Matylo AI</a></li>
+        <li><a href="https://wmswmail.vercel.app/">WMail</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4 id="f-col3">Corporate</h4>
+      <ul>
+        <li><a href="#about" id="f-link-about">About Us</a></li>
+        <li><a href="https://education.winddevelopers.duckdns.org/" id="f-link-education">Wind Education</a></li>
+        <li><a href="mailto:supportwinddevs@gmail.com" id="f-link-contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span id="footer-copy">&copy; 2026 Wind Developers Corporation. All rights reserved.</span>
+    <span>Simply Powerful.</span>
+  </div>
+</footer>
+
+<script>
+  const translations = {
+    en: {
+      pageTitle: "Wind Developers Corporation | Software & Cloud Solutions",
+      metaDesc: "Wind Developers Corporation builds next-generation software: WindexOS Linux distro, Webrix Browser, Matylo AI assistant, WMail, WindStore and Wind Education.",
+      navProducts: "Products", navAbout: "Corporate", navStudio: "Developers Studio",
+      heroEyebrow: "Software & Cloud Ecosystem",
+      heroTitle: "Simply Powerful.",
+      heroDesc: "Wind Developers Corporation develops next-generation open-source projects, robust software, and intuitive digital tools to optimize your daily digital experience.",
+      heroCta: "Explore Ecosystem",
+      sectionProductsTitle: "Innovative Technology Solutions",
+      sectionProductsSub: "Everything we build, from the operating system up.",
+      p1Title: "WindexOS", p1Desc: "A speed and performance-focused modern Linux distribution equipped with custom system utilities, an optimized kernel structure, and native built-in CLI solutions.", p1Link: "Explore WindexOS →",
+      p2Title: "Webrix Browser", p2Desc: "A next-generation browser redefining the web experience with custom URL commands, advanced tab hierarchy, and an ultra-lightweight engine architecture.", p2Link: "Join Webrix →",
+      p3Title: "Matylo", p3Desc: "An intelligent assistant that smartly manages your digital workspaces and communities using advanced AI integrations and automation features.", p3Link: "Discover Matylo →",
+      p4Title: "WMail", p4Desc: "A clean, fast, and secure mail client built for the Wind Developers ecosystem, designed to keep your communication simple and private.", p4Link: "Open WMail →",
+      p5Title: "WindStore", p5Desc: "A modern application marketplace where you can securely access the most powerful and optimized apps within the Wind Developers ecosystem.", p5Link: "Visit WindStore →",
+      p6Title: "Wind Education", p6Desc: "Free learning resources, guides, and courses that help developers and everyday users get the most out of the Wind Developers ecosystem.", p6Link: "Start Learning →",
+      p7Title: "Developers Studio", p7Desc: "An innovative, inclusive, and centralized developer hub designed to accelerate coding workflows and streamline deployment for creators.", p7Link: "Launch Studio →",
+      aboutTitle: "About Wind Developers",
+      aboutDesc: "We turn ideas into pure performance. With our full-stack programming models, custom operating system architecture research, and cutting-edge artificial intelligence integrations, we represent a global software vision dedicated to raising technology standards.",
+      fCol1: "Ecosystem", fCol2: "Developer", fCol3: "Corporate",
+      fLinkAbout: "About Us", fLinkEducation: "Wind Education", fLinkContact: "Contact",
+      footerCopy: "© 2026 Wind Developers Corporation. All rights reserved.",
+      btnText: "TR"
+    },
+    tr: {
+      pageTitle: "Wind Developers Corporation | Simply Powerful",
+      metaDesc: "Wind Developers Corporation; WindexOS, Webrix Browser, Matylo, WMail ve Wind Education ile geleceğin teknolojisini ve yazılım ekosistemini inşa ediyor.",
+      navProducts: "Ürünlerimiz", navAbout: "Kurumsal", navStudio: "Developers Studio",
+      heroEyebrow: "Yazılım ve Bulut Ekosistemi",
+      heroTitle: "Simply Powerful.",
+      heroDesc: "Wind Developers Corporation, yeni nesil açık kaynak projeler ve günlük dijital deneyiminizi optimize eden yazılım araçları geliştirir.",
+      heroCta: "Ekosistemi Keşfedin",
+      sectionProductsTitle: "Yenilikçi Teknoloji Çözümlerimiz",
+      sectionProductsSub: "İşletim sisteminden başlayarak geliştirdiğimiz her şey.",
+      p1Title: "WindexOS", p1Desc: "Özelleştirilmiş sistem araçları, optimize edilmiş çekirdek yapısı ve yerleşik özgün CLI çözümleriyle donatılmış, hız ve performans odaklı modern Linux dağıtımı.", p1Link: "WindexOS Projesini İnceleyin →",
+      p2Title: "Webrix Browser", p2Desc: "Özel URL komutları, gelişmiş sekme hiyerarşisi ve ultra hafif motor mimarisiyle web deneyimini yeniden tanımlayan yeni nesil tarayıcı.", p2Link: "Webrix dünyasına katılın →",
+      p3Title: "Matylo", p3Desc: "Yapay zeka entegrasyonları ve gelişmiş otomasyon yetenekleri ile dijital çalışma alanlarınızı ve topluluklarınızı akıllıca yöneten asistan.", p3Link: "Matylo Bot'u Keşfedin →",
+      p4Title: "WMail", p4Desc: "Wind Developers ekosistemi için geliştirilmiş, sade, hızlı ve güvenli bir e-posta istemcisi.", p4Link: "WMail'i Aç →",
+      p5Title: "WindStore", p5Desc: "Wind Developers ekosistemindeki en güçlü ve optimize uygulamalara güvenle erişebileceğiniz modern uygulama mağazası altyapısı.", p5Link: "WindStore'u Ziyaret Edin →",
+      p6Title: "Wind Education", p6Desc: "Geliştiricilerin ve kullanıcıların Wind Developers ekosisteminden en iyi şekilde faydalanmasını sağlayan ücretsiz eğitim içerikleri ve rehberler.", p6Link: "Öğrenmeye Başlayın →",
+      p7Title: "Developers Studio", p7Desc: "Geliştiriciler için kodlama süreçlerini hızlandıran, entegrasyonu kolaylaştıran yenilikçi ve kapsayıcı merkezi geliştirici platformu.", p7Link: "Stüdyoya Giriş Yapın →",
+      aboutTitle: "Wind Developers Hakkında",
+      aboutDesc: "Fikirleri performansa dönüştürüyoruz. Tam yığın (full-stack) programlama modellerimiz, işletim sistemi mimarisi çalışmalarımız ve yenilikçi yapay zeka entegrasyonlarımızla, teknoloji standartlarını yükseltmeyi hedefleyen global bir yazılım vizyonuyuz.",
+      fCol1: "Ekosistem", fCol2: "Geliştirici", fCol3: "Kurumsal",
+      fLinkAbout: "Hakkımızda", fLinkEducation: "Wind Education", fLinkContact: "İletişim",
+      footerCopy: "© 2026 Wind Developers Corporation. Tüm hakları saklıdır.",
+      btnText: "EN"
+    }
+  };
+
+  let currentLang = 'en';
+
+  function applyTranslations(lang) {
+    const t = translations[lang];
+    document.documentElement.lang = lang;
+
+    document.title = t.pageTitle;
+    document.querySelector('meta[name="description"]').setAttribute('content', t.metaDesc);
+    document.querySelector('meta[property="og:title"]').setAttribute('content', t.pageTitle);
+    document.querySelector('meta[property="og:description"]').setAttribute('content', t.metaDesc);
+
+    document.getElementById('nav-products').innerText = t.navProducts;
+    document.getElementById('nav-about').innerText = t.navAbout;
+    document.getElementById('nav-studio').innerText = t.navStudio;
+
+    document.getElementById('hero-eyebrow').innerText = t.heroEyebrow;
+    document.getElementById('hero-title').innerText = t.heroTitle;
+    document.getElementById('hero-desc').innerText = t.heroDesc;
+    document.getElementById('hero-cta').innerText = t.heroCta;
+
+    document.getElementById('section-products-title').innerText = t.sectionProductsTitle;
+    document.getElementById('section-products-sub').innerText = t.sectionProductsSub;
+
+    ['1','2','3','4','5','6','7'].forEach(n => {
+      document.getElementById(`p${n}-title`).innerText = t[`p${n}Title`];
+      document.getElementById(`p${n}-desc`).innerText = t[`p${n}Desc`];
+      document.getElementById(`p${n}-link`).innerText = t[`p${n}Link`];
+    });
+
+    document.getElementById('about-title').innerText = t.aboutTitle;
+    document.getElementById('about-desc').innerText = t.aboutDesc;
+
+    document.getElementById('f-col1').innerText = t.fCol1;
+    document.getElementById('f-col2').innerText = t.fCol2;
+    document.getElementById('f-col3').innerText = t.fCol3;
+    document.getElementById('f-link-about').innerText = t.fLinkAbout;
+    document.getElementById('f-link-education').innerText = t.fLinkEducation;
+    document.getElementById('f-link-contact').innerText = t.fLinkContact;
+    document.getElementById('footer-copy').innerText = t.footerCopy;
+
+    document.getElementById('lang-btn').innerText = t.btnText;
+  }
+
+  function toggleLanguage() {
+    currentLang = currentLang === 'en' ? 'tr' : 'en';
+    applyTranslations(currentLang);
+  }
+
+  if (new URLSearchParams(window.location.search).get('lang') === 'tr') {
+    currentLang = 'tr';
+    applyTranslations('tr');
+  }
+</script>
 </body>
-
 </html>
