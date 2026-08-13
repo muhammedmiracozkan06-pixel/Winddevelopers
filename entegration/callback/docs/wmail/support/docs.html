@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wmail SSO Integration Docs</title>
+  <style>
+    :root {
+      --bg-primary: #0f172a;
+      --bg-surface: #1e293b;
+      --bg-card: #1e293b;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --accent: #38bdf8;
+      --accent-hover: #0284c7;
+      --warning-border: #f59e0b;
+      --warning-bg: rgba(245, 158, 11, 0.1);
+      --code-bg: #0b1329;
+      --border: #334155;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg-primary);
+      color: var(--text-main);
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* Header */
+    header {
+      background-color: var(--bg-surface);
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .brand {
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .brand span {
+      color: var(--accent);
+    }
+
+    .back-link {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+
+    .back-link:hover {
+      color: var(--accent);
+    }
+
+    /* Container */
+    .layout {
+      display: flex;
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 100%;
+      flex: 1;
+    }
+
+    /* Sidebar Navigation */
+    aside {
+      width: 260px;
+      padding: 2rem 1.5rem;
+      border-right: 1px solid var(--border);
+      display: none;
+    }
+
+    @media (min-width: 768px) {
+      aside {
+        display: block;
+      }
+    }
+
+    aside nav {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      position: sticky;
+      top: 5rem;
+    }
+
+    aside a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: color 0.2s;
+    }
+
+    aside a:hover {
+      color: var(--accent);
+    }
+
+    /* Main Content */
+    main {
+      flex: 1;
+      padding: 2rem;
+      max-width: 800px;
+    }
+
+    .hero {
+      margin-bottom: 2.5rem;
+    }
+
+    .hero h1 {
+      font-size: 2.25rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+      letter-spacing: -0.025em;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+    }
+
+    /* Steps */
+    .step-card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 0.75rem;
+      padding: 1.75rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .step-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
+
+    .step-number {
+      background-color: var(--accent);
+      color: #0f172a;
+      font-weight: 700;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.95rem;
+    }
+
+    .step-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+
+    .step-card p {
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+
+    .step-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Code Blocks & Badges */
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      background-color: var(--code-bg);
+      color: #38bdf8;
+      padding: 0.2rem 0.4rem;
+      border-radius: 0.25rem;
+      font-size: 0.875em;
+    }
+
+    pre {
+      background-color: var(--code-bg);
+      border: 1px solid var(--border);
+      padding: 1rem;
+      border-radius: 0.5rem;
+      overflow-x: auto;
+      margin: 1rem 0;
+    }
+
+    pre code {
+      background: none;
+      padding: 0;
+      color: #e2e8f0;
+    }
+
+    /* Security Box */
+    .security-section {
+      margin-top: 3rem;
+      border: 1px solid var(--warning-border);
+      background-color: var(--warning-bg);
+      border-radius: 0.75rem;
+      padding: 1.75rem;
+    }
+
+    .security-section h2 {
+      color: #fbbf24;
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .security-list {
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .security-list li {
+      position: relative;
+      padding-left: 1.5rem;
+      color: #f1f5f9;
+    }
+
+    .security-list li::before {
+      content: "•";
+      color: #fbbf24;
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+      font-size: 1.2rem;
+      line-height: 1;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border);
+      text-align: center;
+      padding: 2rem;
+      color: var(--text-muted);
+      font-size: 0.875rem;
+      margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navigation Header -->
+  <header>
+    <div class="brand">
+      <span>Wmail</span> SSO Integration Hub
+    </div>
+    <a href="#" class="back-link">&larr; Back to Core</a>
+  </header>
+
+  <div class="layout">
+    <!-- Navigation Sidebar -->
+    <aside>
+      <nav>
+        <a href="#overview">Overview</a>
+        <a href="#step-1">1. App Registration</a>
+        <a href="#step-2">2. User Redirect</a>
+        <a href="#step-3">3. User Approval</a>
+        <a href="#step-4">4. Code Exchange</a>
+        <a href="#security">Security Notes</a>
+      </nav>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main>
+      <!-- Hero Section -->
+      <section id="overview" class="hero">
+        <h1>Single Sign-On (SSO) Integration</h1>
+        <p>
+          <strong>"Sign in with Wmail"</strong> uses a standard OAuth 2.0 authorization-code flow — similar to "Sign in with Google" or Entra ID (Azure AD).
+        </p>
+        <p style="margin-top: 0.75rem;">
+          Nothing about a user's identity is ever sent to your redirect URL until Wmail has verified, server-side, that the URL belongs to your registered application.
+        </p>
+      </section>
+
+      <!-- Step 1 -->
+      <section id="step-1" class="step-card">
+        <div class="step-header">
+          <div class="step-number">1</div>
+          <h2 class="step-title">Register your application</h2>
+        </div>
+        <p>
+          In the Developer Panel, click <strong>Register Application</strong> and give it a name plus one or more exact redirect URIs — the page on your site that Wmail is allowed to send users back to (e.g., <code>https://myapp.com/auth/wmail/callback</code>).
+        </p>
+        <p>
+          You will receive:
+        </p>
+        <ul>
+          <li style="margin-left: 1.25rem; color: var(--text-muted); margin-bottom: 0.5rem;">
+            <code>client_id</code>: Public, safe to include in frontend code.
+          </li>
+          <li style="margin-left: 1.25rem; color: var(--text-muted);">
+            <code>client_secret</code>: Private — keep it strictly on your server (shown once).
+          </li>
+        </ul>
+        <p style="margin-top: 0.75rem;">
+          Wmail will refuse to redirect anywhere that isn't on this exact list, so double- and triple-check it before saving.
+        </p>
+      </section>
+
+      <!-- Step 2 -->
+      <section id="step-2" class="step-card">
+        <div class="step-header">
+          <div class="step-number">2</div>
+          <h2 class="step-title">Send the user to Wmail to sign in</h2>
+        </div>
+        <p>
+          Redirect the user's browser to the login page with your <code>client_id</code>, the exact <code>redirect_uri</code> you registered, and a random <code>state</code> value.
+        </p>
+        <p>
+          <em>Note: Store the <code>state</code> parameter (e.g., in a cookie) so you can verify it on return. This prevents Cross-Site Request Forgery (CSRF) on your callback handler.</em>
+        </p>
+      </section>
+
+      <!-- Step 3 -->
+      <section id="step-3" class="step-card">
+        <div class="step-header">
+          <div class="step-number">3</div>
+          <h2 class="step-title">User signs in and approves</h2>
+        </div>
+        <p>
+          The user logs into their Wmail identity as usual, then sees a consent screen naming your app and the requested permissions (name + email).
+        </p>
+        <p>
+          Only after clicking <strong>Allow</strong> does Wmail redirect back to your <code>redirect_uri</code> with a short-lived, single-use <code>code</code> and your <code>state</code> parameter attached in the query string.
+        </p>
+      </section>
+
+      <!-- Step 4 -->
+      <section id="step-4" class="step-card">
+        <div class="step-header">
+          <div class="step-number">4</div>
+          <h2 class="step-title">Exchange the code for the user's identity</h2>
+        </div>
+        <p>
+          On your callback route, first verify that the returned <code>state</code> matches what you stored in Step 2. Then, call the token endpoint directly from your backend (never from the browser — this request requires your <code>client_secret</code>):
+        </p>
+<pre><code>POST /oauth/token
+Host: wmail.example.com
+Content-Type: application/x-www-form-urlencoded
+
+grant_type=authorization_code
+&amp;client_id=YOUR_CLIENT_ID
+&amp;client_secret=YOUR_CLIENT_SECRET
+&amp;redirect_uri=YOUR_REDIRECT_URI
+&amp;code=AUTHORIZATION_CODE</code></pre>
+      </section>
+
+      <!-- Security Notes -->
+      <section id="security" class="security-section">
+        <h2>⚠️ Security Notes</h2>
+        <ul class="security-list">
+          <li>
+            <strong>Exact URI Matching:</strong> <code>redirect_uri</code> must match exactly what you registered — no wildcards or "starts with" matching allowed. If you need alternate environments (staging, localhost), register them as separate URIs.
+          </li>
+          <li>
+            <strong>Keep Secrets Private:</strong> <code>client_secret</code> is a server-side secret. Never bundle it into frontend JavaScript, mobile apps, or public repositories.
+          </li>
+          <li>
+            <strong>Short-Lived Authorization Code:</strong> The authorization code is single-use and expires after 2 minutes — always exchange it immediately within your callback handler.
+          </li>
+          <li>
+            <strong>State Verification:</strong> Always verify the <code>state</code> parameter on your callback route before trusting the response payload.
+          </li>
+        </ul>
+      </section>
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; Wmail Integration Hub Documentation. All rights reserved.
+  </footer>
+
+</body>
+</html>
